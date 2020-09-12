@@ -22,6 +22,11 @@ class QuickSort
     {  
             // Recursively sort elements before 
             // partition and after partition 
+        if (low < high)
+        {
+            int pi = partition(arr, low, high);
+            sort(arr, low,pi-1);
+            sort(arr, pi+1, high);
     } 
   
     /* A utility function to print array of size n */
